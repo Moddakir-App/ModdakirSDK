@@ -32,14 +32,14 @@ let package = Package(
                 .linkedFramework("ModdakirSDK")
             ]
         ),
-        .binaryTarget(
-            name: "ModdakirSDK",
-            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/v0.0.1/ModdakirSDK.xcframework.zip",
-            checksum: "fbd9487b2d92e5cdcfd895bf475eccb1b6ef6e6e44495f4e9ef7cc5f69361605"
-        )
 //        .binaryTarget(
 //            name: "ModdakirSDK",
-//            path: "./XCFrameworks/ModdakirSDK.xcframework"
+//            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/v0.0.1/ModdakirSDK.xcframework.zip",
+//            checksum: "fbd9487b2d92e5cdcfd895bf475eccb1b6ef6e6e44495f4e9ef7cc5f69361605"
 //        )
+        .binaryTarget(
+            name: "ModdakirSDK",
+            path: "./Frameworks/ModdakirSDK.xcframework"
+        )
     ]
 )
