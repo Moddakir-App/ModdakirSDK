@@ -1,0 +1,33 @@
+{
+  "originHash" : "8cd9b6ad4cacf1fe8f469dc0adb650373a84d2f55c5200b117f219cfa9725017",
+  "pins" : [
+    {
+      "identity" : "agoraaudio_ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AgoraIO/AgoraAudio_iOS",
+      "state" : {
+        "revision" : "ac77c9e5f36629275967a5d9987359eeb9bb9ed4",
+        "version" : "4.3.1"
+      }
+    },
+    {
+      "identity" : "agorartm_ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AgoraIO/AgoraRtm_iOS",
+      "state" : {
+        "revision" : "2e87ada22df8110cf85b9f18c2ac08083f4f63f4",
+        "version" : "1.5.1"
+      }
+    },
+    {
+      "identity" : "networkmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Amin-0-1/NetworkManager",
+      "state" : {
+        "revision" : "d31b3480f91dff5cd15eff20cbd0a9e6bb05e224",
+        "version" : "1.3.1"
+      }
+    }
+  ],
+  "version" : 3
+}
