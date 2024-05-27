@@ -19,12 +19,6 @@ let package = Package(
     ],
     
     targets: [
-        .binaryTarget(
-            name: "ModdakirSDK",
-            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/0.0.2/ModdakirSDK.xcframework.zip",
-            checksum: "abad81dd2b28e50b7598a514ef923a02d647f4bf1bc0c621b755f40c82eea84d"
-        ),
-        
         .target(
             name: "ModdakirSDKWrapper",
             dependencies: [
@@ -33,14 +27,21 @@ let package = Package(
                 .product(name: "AgoraRtmKit", package: "AgoraRtm_iOS"),
                 .product(name: "RtcBasic", package: "AgoraAudio_iOS"),
             ],
-            path: "./Sources/ModdakirSDKWrapper"
-//            linkerSettings: [
-//                .linkedFramework("ModdakirSDK")
-//            ]
-        )
+            path: "./Sources/ModdakirSDKWrapper",
+            linkerSettings: [
+                .linkedFramework("ModdakirSDK")
+            ]
+        ),
+        
 //        .binaryTarget(
 //            name: "ModdakirSDK",
 //            path: "./Frameworks/ModdakirSDK.xcframework"
 //        )
+        
+        .binaryTarget(
+            name: "ModdakirSDK",
+            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/0.0.3/ModdakirSDK.xcframework.zip",
+            checksum: "a8ccc4caca54fc6cc7dce55bc6785311e5639921515c53e4ea0357456fbccf7e"
+        ),
     ]
 )
