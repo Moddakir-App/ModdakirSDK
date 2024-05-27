@@ -27,10 +27,10 @@ let package = Package(
                 .product(name: "AgoraRtmKit", package: "AgoraRtm_iOS"),
                 .product(name: "RtcBasic", package: "AgoraAudio_iOS"),
             ],
-            path: "./Sources/ModdakirSDKWrapper",
-            linkerSettings: [
-                .linkedFramework("ModdakirSDK")
-            ]
+            path: "./Sources/ModdakirSDKWrapper"
+//            linkerSettings: [
+//                .linkedFramework("ModdakirSDK")
+//            ]
         ),
         
 //        .binaryTarget(
@@ -40,8 +40,8 @@ let package = Package(
         
         .binaryTarget(
             name: "ModdakirSDK",
-            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/0.0.3/ModdakirSDK.xcframework.zip",
+            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/0.0.4/ModdakirSDK.xcframework.zip",
             checksum: "86ced94cc1b87cb2b677f17fdf89bc9347cebd39112d68bc8c463df7bc496875"
-        ),
+        )
     ]
 )
