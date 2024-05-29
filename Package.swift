@@ -32,8 +32,8 @@ let package = Package(
         
         .binaryTarget(
             name: "ModdakirSDK",
-            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/0.0.8/ModdakirSDK.xcframework.zip",
-            checksum: "e07c5a6e4d90efdc348e00d9617bcbbda62bc81baa647bb73253bbd38522b57f"
+            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/0.0.9/ModdakirSDK.xcframework.zip",
+            checksum: "5000890a917982eb636c9b3cd585da07622bdc6125b90a884425b6686b98bb92"
         )
     ]
 )
