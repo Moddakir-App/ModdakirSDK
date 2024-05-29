@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/Amin-0-1/NetworkManager", .upToNextMajor(from: "1.3.1")),
+        .package(url: "https://github.com/Amin-0-1/NetworkManager", .upToNextMajor(from: "1.4.0")),
         .package(url: "https://github.com/AgoraIO/AgoraRtm_iOS", .upToNextMajor(from: "1.5.1")),
         .package(url: "https://github.com/AgoraIO/AgoraAudio_iOS", .upToNextMajor(from: "4.3.1"))
     ],
@@ -32,8 +32,8 @@ let package = Package(
         
         .binaryTarget(
             name: "ModdakirSDK",
-            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/0.0.7/ModdakirSDK.xcframework.zip",
-            checksum: "23ad8390b9513f6beebac7735716c71078450fa91eed4fe43bc9bb10dc38c946"
+            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/0.0.8/ModdakirSDK.xcframework.zip",
+            checksum: "e07c5a6e4d90efdc348e00d9617bcbbda62bc81baa647bb73253bbd38522b57f"
         )
     ]
 )
