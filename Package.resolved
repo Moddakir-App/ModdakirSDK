@@ -1,5 +1,5 @@
 {
-  "originHash" : "0998352df2db625429f06eb0c2228f82dd9846ac40def107d75121b174c13ec0",
+  "originHash" : "5149e25b1f81488f8c723c2a043832674175b95cdeca5e511d5bf2f95f1f8f7c",
   "pins" : [
     {
       "identity" : "agoraaudio_ios",
@@ -26,6 +26,15 @@
       "state" : {
         "revision" : "8d832874e085711943f827e6c511a30d435fb1d4",
         "version" : "1.4.0"
+      }
+    },
+    {
+      "identity" : "swiftygif",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/alexiscreuzot/SwiftyGif",
+      "state" : {
+        "revision" : "4430cbc148baa3907651d40562d96325426f409a",
+        "version" : "5.4.5"
       }
     }
   ],
