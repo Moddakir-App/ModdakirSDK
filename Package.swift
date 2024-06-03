@@ -27,7 +27,7 @@ let package = Package(
                 .product(name: "NetworkManager", package: "NetworkManager"),
                 .product(name: "AgoraRtmKit", package: "AgoraRtm_iOS"),
                 .product(name: "RtcBasic", package: "AgoraAudio_iOS"),
-                .product(name: "SwiftyGif-dynamic", package: "SwiftyGif")
+                .product(name: "SwiftyGif-Dynamic", package: "SwiftyGif")
 
             ],
             path: "./Sources/ModdakirSDKWrapper"
