@@ -27,16 +27,16 @@ let package = Package(
                 .product(name: "NetworkManager", package: "NetworkManager"),
                 .product(name: "AgoraRtmKit", package: "AgoraRtm_iOS"),
                 .product(name: "RtcBasic", package: "AgoraAudio_iOS"),
-                .product(name: "SwiftyGif", package: "SwiftyGif")
-                
+                .product(name: "SwiftyGif-dynamic", package: "SwiftyGif")
+
             ],
             path: "./Sources/ModdakirSDKWrapper"
         ),
         
         .binaryTarget(
             name: "ModdakirSDK",
-            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/0.0.11/ModdakirSDK.xcframework.zip",
-            checksum: "1262f091c2ad66957a4676dfbc36bbe17ea3e3183470a40b0f3d467580934059"
+            url: "https://github.com/Moddakir-App/ModdakirSDK/releases/download/0.0.12/ModdakirSDK.xcframework.zip",
+            checksum: "e0cbf9109e47899e5369de68ed6502571c828e7de270afb410fc3542bd2ebf4d"
         )
     ]
 )
