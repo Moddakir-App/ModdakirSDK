@@ -1,12 +1,12 @@
 # ModdakirSDK
- Framework as a Swift package for Integrating with Moddakir Services, it connects you Directly with on of our distinct candidate in order to share the learning of the Holy Qur’an 📖
+ Framework as a Swift package for Integrating with Moddakir Services, it connects you Directly with on of our distinct teachers in order to share the learning of the Holy Qur’an 📖
 
 ## Getting Started
 These instructions will help you setup, integrate and run your project integrated with our SDK.
 
 ### Prerequisits
 - ```Xcode (version 12.0 or newer)```
-- ```iOS (version 14.0 or newer)```
+- ```iOS (version 13.0 or newer)```
 
 ### Integration (SPM)
 To install ModdakirSDK, follow these steps:
