@@ -19,6 +19,10 @@ To install ModdakirSDK, follow these steps:
     https://github.com/Moddakir-App/ModdakirSDK
 
 5. Make sure to add ModdakirSDK Product to your desired target.
+6. Add Moddakir_ID and Moddakir_Key Provided by Moddakir into info.plist
+
+
+<br>
 
 
 ## Quick Start
@@ -58,14 +62,13 @@ extension YourClass: ModdakirServiceDelegate {
         
         switch type {
             case .noInternet:
-
-                break // do something
+                 do_something
             case .notValidEmail:
-
-                break // do something
+                do_something
             case .emptyName:
-
-                break // do something
+                do_something
+            case .unauthorized:
+               check_info.plist
         }
     }
 }
