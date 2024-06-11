@@ -18,25 +18,30 @@ To install ModdakirSDK, follow these steps:
     ```bash
     https://github.com/Moddakir-App/ModdakirSDK
 
-5. Make sure to add ModdakirSDK Product to your desired target.
-6. Add Moddakir_ID and Moddakir_Key Provided by Moddakir into info.plist
+5. Make sure to add ModdakirSDK Product to your target.
+6. Add Moddakir_ID and Moddakir_Key Provided by Moddakir team into info.plist
+7. Add Voice over IP Capapility to your app in order to allow CallKit Screen to manage the call
 
 
 <br>
 
 
 ## Quick Start
-  In order to Initialize ModdakirSDK, you're required to provide user details, and the root view controller
+  In order to Initialize ModdakirSDK, you're required to provide user details, and the root view controller in addition to a png image of your appIcon
+
+```Note that: we need tha png data object of app icon in order to show it in the system calling screen```
   
 ```swift
 import ModdakirSDK
-// rest of code
-.
-.
+/*
+ * rest of code
+ *
+ */
 
 let name = "name"
 let gender: ModdakirGender = .male
 let email = "moddakir@gmail.com"
+guard let pngData = UIImage(named: "AppIcon").pngData() else {return}
 
 ModdakirService.initiateCall(
       userInfo: .init(
@@ -44,11 +49,12 @@ ModdakirService.initiateCall(
           gender: gender,
           email: email
       ),
-      rootView: self
+      rootView: self,
+      appIcon: pngData
 )
 ```
 
-you've to assign yourself as a delegate of ModdakirSDK in order to get notified when something happened
+assign yourself as a delegate of ModdakirSDK in order to get notified when something happened
 
 ```swift
 ModdakirService.delegate = self
