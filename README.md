@@ -27,9 +27,8 @@ To install ModdakirSDK, follow these steps:
 
 
 ## Quick Start
-  In order to Initialize ModdakirSDK, you're required to provide user details, and the root view controller in addition to a png image of your appIcon
+  In order to Initialize ModdakirSDK, you're required to provide user details, and the root view controller in addition to themeMode and    primaryColor
 
-```Note that: we need tha png data object of app icon in order to show it in the system calling screen```
   
 ```swift
 import ModdakirSDK
@@ -41,7 +40,8 @@ import ModdakirSDK
 let name = "name"
 let gender: ModdakirGender = .male
 let email = "moddakir@gmail.com"
-guard let pngData = UIImage(named: "AppIcon").pngData() else {return}
+let color = UiColor.red
+let themeMode: ModdakirThemeManager.ThemeMode = .dark
 
 ModdakirService.initiateCall(
       userInfo: .init(
@@ -50,7 +50,8 @@ ModdakirService.initiateCall(
           email: email
       ),
       rootView: self,
-      appIcon: pngData
+      primaryColor: color,
+      themeMode: themeMode
 )
 ```
 
