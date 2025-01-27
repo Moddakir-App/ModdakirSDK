@@ -40,7 +40,7 @@ import ModdakirSDK
 let name = "name"
 let gender: ModdakirGender = .male
 let email = "moddakir@gmail.com"
-let color = UiColor.red
+let color = UIColor.red
 let themeMode: ModdakirThemeManager.ThemeMode = .dark
 
 ModdakirService.initiateCall(
