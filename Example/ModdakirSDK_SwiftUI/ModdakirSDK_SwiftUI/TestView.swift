@@ -9,34 +9,39 @@ import SwiftUI
 import ModdakirSDK
 
 struct TestView: View {
-
     @State private var hostVC: UIViewController?
-    private var viewModel: TestViewModel = .init()
+    private var viewModel = TestViewModel()
 
     var body: some View {
         VStack {
-            Button {
-                if let hostVC {
-                    viewModel.onStart(root: hostVC)
-                }
-            } label: {
+            Button(action: startSDK) {
                 Text("Start SDK")
-                    .font(.title)
+                    .font(.title2)
                     .foregroundStyle(.white)
                     .padding(.vertical, 8)
                     .padding(.horizontal)
                     .background(.black)
                     .clipShape(.capsule)
             }
-
+            .disabled(hostVC == nil)
         }
         .background(
             ViewControllerResolver { vc in
-                self.hostVC = vc
-            }.frame(width: 0, height: 0)
+                if hostVC == nil {
+                    hostVC = vc
+                }
+            }
         )
     }
 }
+
+private extension TestView {
+    func startSDK() {
+        guard let hostVC else { return }
+        viewModel.onStart(root: hostVC)
+    }
+}
+
 
 #Preview {
     TestView()
