@@ -1,5 +1,5 @@
 {
-  "originHash" : "1d8c47968df835feb7922fb5cde711d48e168561089d7e4a97ac507ef494b697",
+  "originHash" : "7344e0bbeef02555dec5dc295f31f3ad89a028f23163f09a4e0dcb13653d8bb1",
   "pins" : [
     {
       "identity" : "agoraaudio_ios",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "0071cecee99160f056c943ee6bfca06685ffa3d7",
         "version" : "1.3.0"
+      }
+    },
+    {
+      "identity" : "moddakirsdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Moddakir-App/ModdakirSDK.git",
+      "state" : {
+        "revision" : "0ef01650ab7637334fe82701a0811b604bffde7f",
+        "version" : "0.1.7"
       }
     },
     {

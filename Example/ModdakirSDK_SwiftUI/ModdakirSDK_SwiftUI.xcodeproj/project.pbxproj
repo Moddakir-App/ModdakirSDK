@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		274028412E70F35B00194D4D /* ModdakirSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 274028402E70F35B00194D4D /* ModdakirSDK */; };
+		71E3E0C82E8C2BDA00ECCA41 /* ModdakirSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 71E3E0C72E8C2BDA00ECCA41 /* ModdakirSDK */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7177DC222E8C1E790050DA5C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		274028312E70F26C00194D4D /* ModdakirSDK_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModdakirSDK_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				274028412E70F35B00194D4D /* ModdakirSDK in Frameworks */,
+				71E3E0C82E8C2BDA00ECCA41 /* ModdakirSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +73,8 @@
 				2740282D2E70F26C00194D4D /* Sources */,
 				2740282E2E70F26C00194D4D /* Frameworks */,
 				2740282F2E70F26C00194D4D /* Resources */,
+				7177DC222E8C1E790050DA5C /* Embed Frameworks */,
+				71E3E0C92E8C2C3200ECCA41 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -70,7 +85,7 @@
 			);
 			name = ModdakirSDK_SwiftUI;
 			packageProductDependencies = (
-				274028402E70F35B00194D4D /* ModdakirSDK */,
+				71E3E0C72E8C2BDA00ECCA41 /* ModdakirSDK */,
 			);
 			productName = ModdakirSDK_SwiftUI;
 			productReference = 274028312E70F26C00194D4D /* ModdakirSDK_SwiftUI.app */;
@@ -101,7 +116,7 @@
 			mainGroup = 274028282E70F26C00194D4D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				2740283F2E70F35A00194D4D /* XCLocalSwiftPackageReference "../../../ModdakirSDK" */,
+				71E3E0C62E8C2BDA00ECCA41 /* XCRemoteSwiftPackageReference "ModdakirSDK" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 274028322E70F26C00194D4D /* Products */;
@@ -122,6 +137,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71E3E0C92E8C2C3200ECCA41 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Re-signing frameworks...\"\n\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# Find and re-sign all frameworks\nfind \"$APP_PATH/Frameworks\" -name \"*.framework\" -type d 2>/dev/null | while read -r FRAMEWORK\ndo\n    FRAMEWORK_NAME=$(basename \"$FRAMEWORK\" .framework)\n    FRAMEWORK_EXECUTABLE=\"$FRAMEWORK/$FRAMEWORK_NAME\"\n    \n    if [ -f \"$FRAMEWORK_EXECUTABLE\" ]; then\n        echo \"Re-signing: $FRAMEWORK_NAME\"\n        /usr/bin/codesign --force --deep --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" --preserve-metadata=identifier,entitlements --timestamp=none \"$FRAMEWORK\"\n    fi\ndone\n\necho \"Re-signing complete!\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2740282D2E70F26C00194D4D /* Sources */ = {
@@ -261,8 +296,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K8MN462JFJ;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 4N44F7LMAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We Need access to microphone";
@@ -276,7 +311,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.moddakir.ModdakirSDK-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arabdt.ModdakirStudent.Twilio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -290,8 +325,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K8MN462JFJ;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 4N44F7LMAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We Need access to microphone";
@@ -305,7 +340,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.moddakir.ModdakirSDK-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arabdt.ModdakirStudent.Twilio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -336,16 +371,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		2740283F2E70F35A00194D4D /* XCLocalSwiftPackageReference "../../../ModdakirSDK" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../ModdakirSDK;
+/* Begin XCRemoteSwiftPackageReference section */
+		71E3E0C62E8C2BDA00ECCA41 /* XCRemoteSwiftPackageReference "ModdakirSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moddakir-App/ModdakirSDK.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.7;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		274028402E70F35B00194D4D /* ModdakirSDK */ = {
+		71E3E0C72E8C2BDA00ECCA41 /* ModdakirSDK */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 71E3E0C62E8C2BDA00ECCA41 /* XCRemoteSwiftPackageReference "ModdakirSDK" */;
 			productName = ModdakirSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
